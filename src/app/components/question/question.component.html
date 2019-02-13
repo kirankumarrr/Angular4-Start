@@ -1,0 +1,20 @@
+<div class="question">
+  <div class="card">
+    <div class="card-header">
+      {{question.text}}
+
+      <a href="#" class="btn btn-link" (click)="hideShowBtn($event,i)">show</a>
+
+      <!-- you can do instead of sending index in the function -->
+
+      <!--
+        <a href="#" class="btn btn-link" (click)="question.hide = ! question.hide">show</a>
+      -->
+    </div>
+    <div class="card-block" [hidden]="question.hide">
+      <!-- this is property binding -->
+      <div class="card-text">{{question.answer}}</div>
+    </div>
+  </div>
+  <br /><br />
+</div>
