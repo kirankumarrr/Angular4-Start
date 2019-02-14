@@ -11,6 +11,7 @@ export class QuestionComponent implements OnInit {
   @Input("question") question: Questions;
 
   @Output() OnParenHideShow = new EventEmitter<any>();
+  ViewChildMessage: string = "This msg is form Child Question Component";
   constructor() {}
   ngOnInit() {}
 
