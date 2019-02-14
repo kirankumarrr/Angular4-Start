@@ -1,5 +1,5 @@
 <app-question
   *ngFor="let question of questions;let i = index"
   [question]="question"
-  (hideShowBtn)="hideShowBtn($event,i)"
+  (OnParenHideShow)="OnParenHideShow($event,i)"
 ></app-question>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Questions } from "../../models/Questions";
 @Component({
   selector: "app-question",
@@ -6,8 +6,16 @@ import { Questions } from "../../models/Questions";
   styleUrls: ["./question.component.css"]
 })
 export class QuestionComponent implements OnInit {
-  @Output() valueChange = new EventEmitter();
+  //@Output() hideShowBtn = new EventEmitter();
+
   @Input("question") question: Questions;
+
+  @Output() OnParenHideShow = new EventEmitter<any>();
   constructor() {}
   ngOnInit() {}
+
+  hideShowBtn(e, i) {
+    this.OnParenHideShow.emit(e, i);
+    console.log("hi");
+  }
 }

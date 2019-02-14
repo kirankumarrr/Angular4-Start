@@ -14,8 +14,9 @@ export class QuestionListComponent implements OnInit {
     this.questions = this.dataServices.getQuestions();
   }
 
-  hideShowBtn(e, i) {
+  OnParenHideShow(e, i) {
     console.log(e);
+    //  console.log("INDEX" + i);
     this.questions[i].hide = !this.questions[i].hide;
   }
 }
